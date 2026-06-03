@@ -11,7 +11,9 @@ vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>")
 
 -- LSP -------------
 -- Shift + k
-vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+vim.keymap.set("n", "K", function()
+  vim.lsp.buf.hover({ max_width = 120, max_height = 60, border = "rounded" })
+end)
 -- gd
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 -- Space + ca

@@ -22,9 +22,6 @@ return {
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.lsp.handlers["textDocument/hover"] =
-          vim.lsp.with(vim.lsp.handlers.hover, { max_width = 120, max_height = 60, border = "rounded" })
-
       vim.lsp.enable("lua_ls")
       vim.lsp.config("lua_ls", {
         settings = {
