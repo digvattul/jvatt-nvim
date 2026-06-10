@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>")
 -- LSP -------------
 -- Shift + k
 vim.keymap.set("n", "K", function()
-  vim.lsp.buf.hover({ max_width = 120, max_height = 60, border = "rounded" })
+	vim.lsp.buf.hover({ max_width = 120, max_height = 60, border = "rounded" })
 end)
 -- gd
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -33,3 +33,6 @@ vim.keymap.set("v", "<leader>y", '"+y', {})
 vim.keymap.set("n", "<leader>w", "<ESC>:w<CR>")
 -- Space + n
 vim.keymap.set("n", "<C-n>", ":lua vim.diagnostic.goto_next()<CR>")
+-- Lines per scroll --
+vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelUp>", "1<C-y>", { noremap = true })
+vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelDown>", "1<C-e>", { noremap = true })
