@@ -27,12 +27,12 @@ vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
 
 -- VIM -------------
--- Space + y
+-- Space + y - copy to os clipboard
 vim.keymap.set("v", "<leader>y", '"+y', {})
--- Space + w
+-- Space + w - write file
 vim.keymap.set("n", "<leader>w", "<ESC>:w<CR>")
--- Space + n
+-- CTRL + n - go to next error
 vim.keymap.set("n", "<C-n>", ":lua vim.diagnostic.goto_next()<CR>")
 -- Lines per scroll --
-vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelUp>", "1<C-y>", { noremap = true })
-vim.keymap.set({ "n", "i", "v" }, "<ScrollWheelDown>", "1<C-e>", { noremap = true })
+vim.keymap.set({ "n", "v" }, "<ScrollWheelUp>", "1<C-y>", { noremap = true })
+vim.keymap.set({ "n", "v" }, "<ScrollWheelDown>", "1<C-e>", { noremap = true })
