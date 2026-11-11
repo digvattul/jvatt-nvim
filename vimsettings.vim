@@ -24,3 +24,5 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " ...no page up/page down in insert mode"
 inoremap <PageUp> <Nop>
 inoremap <PageDown> <Nop>
+" Don't touch unnamed register when pasting over visual selection
+xnoremap <expr> p 'pgv"' . v:register . 'y'
